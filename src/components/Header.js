@@ -16,15 +16,15 @@ const Header = () => {
   return (
     <div className="flex justify-between bg-pink-100 shadow-lg sm:bg-yellow-50 lg:bg-green-50">
       <div className="logo-container w-32">
-        <img className="w-80" src={logo} />
+      <Link to="/"><img className="w-80" src={logo} /> </Link>
       </div>
       <div className="flex items-center">
         <ul className="flex p-4 m-4">
-          <li className="px-4">
-            <Link to="/">Home</Link>
+          <li className="px-5">
+            <Link to="/">Home </Link>
           </li>
           <li className="px-4">
-            <Link to="/about">About us</Link>{" "}
+            <Link to="/about">Profile</Link>{" "}
           </li>
           <li className="px-4">
             <Link to="/contact">Contact us</Link>{" "}
@@ -34,7 +34,7 @@ const Header = () => {
           </li>
           <li className="px-4 font-bold ">
             {" "}
-            <Link to="/cart">Cart-</Link>({cartItems.length} items)
+            <Link to="/cart">Cart-🛒</Link>({cartItems.length} items)
           </li>
           <button
             className="login"
