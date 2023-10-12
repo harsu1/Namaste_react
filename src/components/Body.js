@@ -52,10 +52,10 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="filter flex">
-        <div className="search m-4 p-4">
+        <div className="search m-4 p-4 ">
           <input
             type="text"
-            className="border border-solid border-black"
+            className="border border-solid border-black rounded-br-sm rounded-sm "
             value={searchText}
             onChange={(e) => {
               setsearchText(e.target.value);
@@ -73,14 +73,14 @@ const Body = () => {
             Search
           </button>
         </div>
-        <div className="search m-4 p-4 flex items-center">
+        <div className="search m-4 p-4 ">
           <button
-            className="px-4 py-2 bg-gray-100 rounded-lg"
+            className="bg-green-100 hover:bg-green-300  text-black font-bold py-2 px-4 rounded-lg "
             onClick={() => {
               const filteredList = listOfRestaurents.filter(
                 (res) => res.info?.avgRating > 4
               );
-              setListofRestraunt(filteredList);
+              setfilterdRestaurant(filteredList);
             }}
           >
             Top rated Restaurent
