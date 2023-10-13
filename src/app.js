@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
 import Footer from "./components/__tests__/Footer";
+import LoginPage from "./components/LoginPage";
 //import Grocery from "./components/Grocery";
 //react element
 
@@ -80,6 +81,11 @@ const appRouter = createBrowserRouter([
       {
          path:"/cart",
          element:<Cart/>
+      },
+      {
+        path:"/LoginPage",
+        element:<LoginPage/>
+  
       }
     ],
     errorElement: <Error />,
