@@ -11,8 +11,6 @@ const Body = () => {
 
   const [searchText, setsearchText] = useState("");
 
-  
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -61,6 +59,7 @@ const Body = () => {
               setsearchText(e.target.value);
             }}
           />
+       
           <button
             className="px-4 py-2 bg-green-100 m-4 rounded-lg"
             onClick={() => {
@@ -73,9 +72,19 @@ const Body = () => {
             Search
           </button>
         </div>
-        <div className="search m-4 p-4 ">
+
+        <div className="search m-4 p-4 flex items-center">
+          <label> UserName : </label>
+          <input
+            className="border border-black p-1"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+        </div>
+
+        <div className="search m-4 p-8">
           <button
-            className="bg-green-100 hover:bg-green-300  text-black font-bold py-2 px-4 rounded-lg "
+            className="bg-green-100 hover:bg-green-300  text-black font-bold py-2 px-4 rounded-lg  "
             onClick={() => {
               const filteredList = listOfRestaurents.filter(
                 (res) => res.info?.avgRating > 4
@@ -85,15 +94,6 @@ const Body = () => {
           >
             Top rated Restaurent
           </button>
-        </div>
-
-        <div className="search m-4 p-4 flex items-center">
-          <label> UserName :  </label>
-          <input
-            className="border border-black p-1"
-            value={loggedInUser}
-            onChange={(e) => setUserName(e.target.value)}
-          />
         </div>
       </div>
 
