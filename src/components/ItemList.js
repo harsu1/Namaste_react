@@ -16,6 +16,16 @@ const ItemList = ({ items ,dummy }) => {
           key={item.card.info.id}
           className="p-2 m-2 border-gray-200 border-b-2 text-left flex justify-between"
         >
+          <div className=""> 
+            <img
+              src={
+                "https://corsproxy.org/?https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
+                item.card.info.imageId
+              }
+              alt=""
+              className="h-60 rounded-3xl "
+            />
+          </div>
           <div className="w-9/12">
             <div className="py-2">
               <span>{item.card.info.name}</span>
