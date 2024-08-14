@@ -34,6 +34,7 @@ class UserClass extends React.Component{
             <h2 className="font-bold ">Name: {name}</h2>
             <h3>Location: {location}</h3>
             <h4>Contact: @harsu1</h4>
+        
           </div>
         );
     }
